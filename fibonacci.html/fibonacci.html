@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='fibonacci.js'></script>
+    <link rel="stylesheet" href="fibonacci.css">
+</head>
+<body>
+  <script>
+        function fibonacci() {
+            let n1=0, n2=1,nextinteger;
+            var e=document.getElementById("ent").value;
+            var o=document.getElementById("out")
+            o.innerHTML += n1 +"<br>"; 
+            o.innerHTML += n2 +"<br>";
+        
+            nextinteger= n1+n2
+        
+            while (nextinteger <= e) {
+        
+                o.innerHTML += nextinteger + "<br>";
+        
+                n1 = n2;
+                n2 = nextinteger;
+                nextinteger = n1 + n2;
+            }
+        }
+    </script>
+    <h1  class="header"> Fibonacci Series: </h1>
+    <input id="ent">
+    <button onclick="fibonacci()" class="but1"> PRESS HERE!</button>
+    <div id="out"></div>
+
+    <style>
+        .but1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            color: rgb(67, 165, 105);
+            text-align:center;
+            border-radius: 50%;
+            }
+        .header{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 56;
+            color: rgb(19, 182, 49);
+            }
+    </style>
+</body>
+</html>
